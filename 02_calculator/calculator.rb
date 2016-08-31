@@ -38,9 +38,19 @@ def power(number, power)
 	result = number**power
 end
 
-def factorical(number)
-	result = number
-	number.times do 
-		result += number - 1
+def factorial(number)
+	result = 1
+	counter = number
+	if number == 0
+		result = 1
+	else
+		while number > 0 
+			result *= number 
+			number -= 1
+		end
 	end
+
+	return result
 end
+
+factorial(1)
